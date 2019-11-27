@@ -1,0 +1,416 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{31}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Agichtein, Castillo, Donato, Gionis, and
+  Mishne}{Agichtein et~al\mbox{.}}{2008}]%
+        {agichtein2008finding}
+\bibfield{author}{\bibinfo{person}{Eugene Agichtein}, \bibinfo{person}{Carlos
+  Castillo}, \bibinfo{person}{Debora Donato}, \bibinfo{person}{Aristides
+  Gionis}, {and} \bibinfo{person}{Gilad Mishne}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Finding high-quality content in social media}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2008 international conference on
+  web search and data mining}}. ACM, \bibinfo{pages}{183--194}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Anderson, May, and Anderson}{Anderson
+  et~al\mbox{.}}{1992}]%
+        {anderson1992infectious}
+\bibfield{author}{\bibinfo{person}{Roy~M Anderson}, \bibinfo{person}{Robert~M
+  May}, {and} \bibinfo{person}{B Anderson}.} \bibinfo{year}{1992}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Infectious diseases of humans: dynamics and
+  control}}. Vol.~\bibinfo{volume}{28}.
+\newblock \bibinfo{publisher}{Wiley Online Library}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Bakshy, Rosenn, Marlow, and Adamic}{Bakshy
+  et~al\mbox{.}}{2012}]%
+        {bakshy2012role}
+\bibfield{author}{\bibinfo{person}{Eytan Bakshy}, \bibinfo{person}{Itamar
+  Rosenn}, \bibinfo{person}{Cameron Marlow}, {and} \bibinfo{person}{Lada
+  Adamic}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{The role of social networks in information
+  diffusion}. In \bibinfo{booktitle}{\emph{Proceedings of the 21st
+  international conference on World Wide Web}}. ACM, \bibinfo{pages}{519--528}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Chen, Lakshmanan, and Castillo}{Chen
+  et~al\mbox{.}}{2013}]%
+        {chen2013information}
+\bibfield{author}{\bibinfo{person}{Wei Chen}, \bibinfo{person}{Laks~VS
+  Lakshmanan}, {and} \bibinfo{person}{Carlos Castillo}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Information and influence propagation in social
+  networks}.
+\newblock \bibinfo{journal}{\emph{Synthesis Lectures on Data Management}}
+  \bibinfo{volume}{5}, \bibinfo{number}{4} (\bibinfo{year}{2013}),
+  \bibinfo{pages}{1--177}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cheng, Evans, and Singh}{Cheng
+  et~al\mbox{.}}{2009}]%
+        {cheng2009inside}
+\bibfield{author}{\bibinfo{person}{Alex Cheng}, \bibinfo{person}{Mark Evans},
+  {and} \bibinfo{person}{Harshdeep Singh}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Inside Twitter: An in-depth look inside the Twitter
+  world}.
+\newblock \bibinfo{journal}{\emph{Report of Sysomos, June, Toronto, Canada}}
+  (\bibinfo{year}{2009}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cohen, Havlin, and ben Avraham}{Cohen
+  et~al\mbox{.}}{2003}]%
+        {PhysRevLett.91.247901}
+\bibfield{author}{\bibinfo{person}{Reuven Cohen}, \bibinfo{person}{Shlomo
+  Havlin}, {and} \bibinfo{person}{Daniel ben Avraham}.}
+  \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Efficient Immunization Strategies for Computer
+  Networks and Populations}.
+\newblock \bibinfo{journal}{\emph{Phys. Rev. Lett.}}  \bibinfo{volume}{91}
+  (\bibinfo{date}{Dec} \bibinfo{year}{2003}), \bibinfo{pages}{247901}.
+\newblock
+Issue 24.
+\urldef\tempurl%
+\url{https://doi.org/10.1103/PhysRevLett.91.247901}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Cumming}{Cumming}{2013}]%
+        {cumming2013understanding}
+\bibfield{author}{\bibinfo{person}{Geoff Cumming}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Understanding the new statistics: Effect
+  sizes, confidence intervals, and meta-analysis}}.
+\newblock \bibinfo{publisher}{Routledge}. 27--28 pages.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dalgaard}{Dalgaard}{2008}]%
+        {dalgaard2011}
+\bibfield{author}{\bibinfo{person}{Peter Dalgaard}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Introductory Statistics with R}.
+\newblock \bibinfo{publisher}{Springer}, Chapter Power and the computation of
+  sample size, \bibinfo{pages}{155--262}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Devore}{Devore}{2011}]%
+        {devore2011probability}
+\bibfield{author}{\bibinfo{person}{Jay~L Devore}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Probability and Statistics for Engineering
+  and the Sciences} (\bibinfo{edition}{8th} ed.)}.
+\newblock \bibinfo{publisher}{Cengage learning}. 300--344 pages.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Doerr, Fouz, and Friedrich}{Doerr
+  et~al\mbox{.}}{2012}]%
+        {doerr2012rumors}
+\bibfield{author}{\bibinfo{person}{Benjamin Doerr}, \bibinfo{person}{Mahmoud
+  Fouz}, {and} \bibinfo{person}{Tobias Friedrich}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Why rumors spread so quickly in social networks}.
+\newblock \bibinfo{journal}{\emph{Commun. ACM}} \bibinfo{volume}{55},
+  \bibinfo{number}{6} (\bibinfo{year}{2012}), \bibinfo{pages}{70--75}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Draper}{Draper}{2011}]%
+        {DictionaryofStatistics}
+\bibfield{author}{\bibinfo{person}{Norman~R. Draper}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{The Cambridge Dictionary of Statistics, Fourth
+  Edition by B. S. Everitt, A. Skrondal}.
+\newblock \bibinfo{journal}{\emph{International Statistical Review}}
+  \bibinfo{volume}{79}, \bibinfo{number}{2} (\bibinfo{year}{2011}),
+  \bibinfo{pages}{273--274}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1111/j.1751-5823.2011.00149\_2.x}
+\showDOI{\tempurl}
+\showeprint{https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1751-5823.2011.00149\_2.x}
+
+
+\bibitem[\protect\citeauthoryear{Fortunato}{Fortunato}{2010}]%
+        {fortunato2010community}
+\bibfield{author}{\bibinfo{person}{S Fortunato}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Community detection in graphs. Phys. Rep}.
+\newblock  (\bibinfo{year}{2010}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Heesterbeek}{Heesterbeek}{2000}]%
+        {heesterbeek2000mathematical}
+\bibfield{author}{\bibinfo{person}{JAP Heesterbeek}.}
+  \bibinfo{year}{2000}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Mathematical epidemiology of infectious
+  diseases: model building, analysis and interpretation}}.
+  Vol.~\bibinfo{volume}{5}.
+\newblock \bibinfo{publisher}{John Wiley \& Sons}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Johnson}{Johnson}{2013}]%
+        {johnson2013revised}
+\bibfield{author}{\bibinfo{person}{Valen~E Johnson}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Revised standards for statistical evidence}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the National Academy of
+  Sciences}} \bibinfo{volume}{110}, \bibinfo{number}{48}
+  (\bibinfo{year}{2013}), \bibinfo{pages}{19313--19317}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Keeling and Rohani}{Keeling and
+  Rohani}{2008}]%
+        {keeling2008modeling}
+\bibfield{author}{\bibinfo{person}{Matt~J Keeling} {and}
+  \bibinfo{person}{Pejman Rohani}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Modeling infectious diseases in humans and
+  animals}}.
+\newblock \bibinfo{publisher}{Princeton University Press}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kitsak, Gallos, Havlin, Liljeros, Muchnik,
+  Stanley, and Makse}{Kitsak et~al\mbox{.}}{2010}]%
+        {kitsak2010identification}
+\bibfield{author}{\bibinfo{person}{Maksim Kitsak}, \bibinfo{person}{Lazaros~K
+  Gallos}, \bibinfo{person}{Shlomo Havlin}, \bibinfo{person}{Fredrik Liljeros},
+  \bibinfo{person}{Lev Muchnik}, \bibinfo{person}{H~Eugene Stanley}, {and}
+  \bibinfo{person}{Hern{\'a}n~A Makse}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Identification of influential spreaders in complex
+  networks}.
+\newblock \bibinfo{journal}{\emph{Nature physics}} \bibinfo{volume}{6},
+  \bibinfo{number}{11} (\bibinfo{year}{2010}), \bibinfo{pages}{888--893}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Krzywinski and Altman}{Krzywinski and
+  Altman}{2013}]%
+        {krzywinski2013points}
+\bibfield{author}{\bibinfo{person}{Martin Krzywinski} {and}
+  \bibinfo{person}{Naomi Altman}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \bibinfo{title}{Points of significance: Significance, P values and
+  t-tests}.
+\newblock , \bibinfo{numpages}{1041--1042}~pages.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Leskovec, Adamic, and Huberman}{Leskovec
+  et~al\mbox{.}}{2007}]%
+        {Leskovec:2007:DVM:1232722.1232727}
+\bibfield{author}{\bibinfo{person}{Jure Leskovec}, \bibinfo{person}{Lada~A.
+  Adamic}, {and} \bibinfo{person}{Bernardo~A. Huberman}.}
+  \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{The Dynamics of Viral Marketing}.
+\newblock \bibinfo{journal}{\emph{ACM Trans. Web}} \bibinfo{volume}{1},
+  \bibinfo{number}{1}, Article \bibinfo{articleno}{5} (\bibinfo{date}{May}
+  \bibinfo{year}{2007}).
+\newblock
+\showISSN{1559-1131}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1232722.1232727}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Liu, Tang, Zhou, and Do}{Liu
+  et~al\mbox{.}}{2015}]%
+        {liu2015improving}
+\bibfield{author}{\bibinfo{person}{Ying Liu}, \bibinfo{person}{Ming Tang},
+  \bibinfo{person}{Tao Zhou}, {and} \bibinfo{person}{Younghae Do}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Improving the accuracy of the k-shell method by
+  removing redundant links: From a perspective of spreading dynamics}.
+\newblock \bibinfo{journal}{\emph{Scientific reports}}  \bibinfo{volume}{5}
+  (\bibinfo{year}{2015}), \bibinfo{pages}{13172}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{L{\"u}, Chen, Ren, Zhang, Zhang, and
+  Zhou}{L{\"u} et~al\mbox{.}}{2016}]%
+        {lu2016vital}
+\bibfield{author}{\bibinfo{person}{Linyuan L{\"u}}, \bibinfo{person}{Duanbing
+  Chen}, \bibinfo{person}{Xiao-Long Ren}, \bibinfo{person}{Qian-Ming Zhang},
+  \bibinfo{person}{Yi-Cheng Zhang}, {and} \bibinfo{person}{Tao Zhou}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Vital nodes identification in complex networks}.
+\newblock \bibinfo{journal}{\emph{Physics Reports}}  \bibinfo{volume}{650}
+  (\bibinfo{year}{2016}), \bibinfo{pages}{1--63}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{L{\"u}, Medo, Yeung, Zhang, Zhang, and
+  Zhou}{L{\"u} et~al\mbox{.}}{2012}]%
+        {lu2012recommender}
+\bibfield{author}{\bibinfo{person}{Linyuan L{\"u}},
+  \bibinfo{person}{Mat{\'u}{\v{s}} Medo}, \bibinfo{person}{Chi~Ho Yeung},
+  \bibinfo{person}{Yi-Cheng Zhang}, \bibinfo{person}{Zi-Ke Zhang}, {and}
+  \bibinfo{person}{Tao Zhou}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Recommender systems}.
+\newblock \bibinfo{journal}{\emph{Physics reports}} \bibinfo{volume}{519},
+  \bibinfo{number}{1} (\bibinfo{year}{2012}), \bibinfo{pages}{1--49}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Milstein, Lorica, Magoulas, Hochmuth,
+  Chowdhury, and O'Reilly}{Milstein et~al\mbox{.}}{2008}]%
+        {milstein2008twitter}
+\bibfield{author}{\bibinfo{person}{Sarah Milstein}, \bibinfo{person}{Ben
+  Lorica}, \bibinfo{person}{Roger Magoulas}, \bibinfo{person}{Gregor Hochmuth},
+  \bibinfo{person}{Abdur Chowdhury}, {and} \bibinfo{person}{Tim O'Reilly}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Twitter and the micro-messaging revolution:
+  Communication, connections, and immediacy--140 characters at a time}}.
+\newblock \bibinfo{publisher}{O'Reilly Media, Incorporated}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Myers, Well, and Lorch}{Myers
+  et~al\mbox{.}}{2010}]%
+        {myers2010developing}
+\bibfield{author}{\bibinfo{person}{Jerome~L Myers}, \bibinfo{person}{Arnold~D
+  Well}, {and} \bibinfo{person}{JR Lorch}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Developing the fundamentals of hypothesis testing
+  using the binomial distribution}.
+\newblock \bibinfo{journal}{\emph{Research design and statistical analysis}}
+  (\bibinfo{year}{2010}), \bibinfo{pages}{65--90}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Newman}{Newman}{2010}]%
+        {Newman:2010:NI:1809753}
+\bibfield{author}{\bibinfo{person}{Mark Newman}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Networks: An Introduction}}.
+\newblock \bibinfo{publisher}{Oxford University Press, Inc.},
+  \bibinfo{address}{New York, NY, USA}.
+\newblock
+\showISBNx{0199206651, 9780199206650}
+
+
+\bibitem[\protect\citeauthoryear{Pal and Counts}{Pal and Counts}{2011}]%
+        {pal2011identifying}
+\bibfield{author}{\bibinfo{person}{Aditya Pal} {and} \bibinfo{person}{Scott
+  Counts}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Identifying topical authorities in microblogs}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the fourth ACM international
+  conference on Web search and data mining}}. ACM, \bibinfo{pages}{45--54}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Pastor-Satorras and
+  Vespignani}{Pastor-Satorras and Vespignani}{2001}]%
+        {pastor2001epidemic}
+\bibfield{author}{\bibinfo{person}{Romualdo Pastor-Satorras} {and}
+  \bibinfo{person}{Alessandro Vespignani}.} \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{Epidemic spreading in scale-free networks}.
+\newblock \bibinfo{journal}{\emph{Physical review letters}}
+  \bibinfo{volume}{86}, \bibinfo{number}{14} (\bibinfo{year}{2001}),
+  \bibinfo{pages}{3200}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Pastor-Satorras and
+  Vespignani}{Pastor-Satorras and Vespignani}{2002}]%
+        {pastor2002immunization}
+\bibfield{author}{\bibinfo{person}{Romualdo Pastor-Satorras} {and}
+  \bibinfo{person}{Alessandro Vespignani}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Immunization of complex networks}.
+\newblock \bibinfo{journal}{\emph{Physical review E}} \bibinfo{volume}{65},
+  \bibinfo{number}{3} (\bibinfo{year}{2002}), \bibinfo{pages}{036104}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Redmond and Colton}{Redmond and
+  Colton}{2001}]%
+        {redmond2001biostatistics}
+\bibfield{author}{\bibinfo{person}{Carol~K Redmond} {and}
+  \bibinfo{person}{Theodore Colton}.} \bibinfo{year}{2001}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Biostatistics in clinical trials}}.
+\newblock \bibinfo{publisher}{John Wiley \& Sons}. 35--36 pages.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Seidman}{Seidman}{1983}]%
+        {seidman1983network}
+\bibfield{author}{\bibinfo{person}{Stephen~B Seidman}.}
+  \bibinfo{year}{1983}\natexlab{}.
+\newblock \showarticletitle{Network structure and minimum degree}.
+\newblock \bibinfo{journal}{\emph{Social networks}} \bibinfo{volume}{5},
+  \bibinfo{number}{3} (\bibinfo{year}{1983}), \bibinfo{pages}{269--287}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Wang, Zhao, Xi, and Du}{Wang
+  et~al\mbox{.}}{2016}]%
+        {wang2016fast}
+\bibfield{author}{\bibinfo{person}{Zhixiao Wang}, \bibinfo{person}{Ya Zhao},
+  \bibinfo{person}{Jingke Xi}, {and} \bibinfo{person}{Changjiang Du}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Fast ranking influential nodes in complex networks
+  using a k-shell iteration factor}.
+\newblock \bibinfo{journal}{\emph{Physica A: Statistical Mechanics and its
+  Applications}}  \bibinfo{volume}{461} (\bibinfo{year}{2016}),
+  \bibinfo{pages}{171--181}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Weng, Lim, Jiang, and He}{Weng
+  et~al\mbox{.}}{2010}]%
+        {weng2010twitterrank}
+\bibfield{author}{\bibinfo{person}{Jianshu Weng}, \bibinfo{person}{Ee-Peng
+  Lim}, \bibinfo{person}{Jing Jiang}, {and} \bibinfo{person}{Qi He}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Twitterrank: finding topic-sensitive influential
+  twitterers}. In \bibinfo{booktitle}{\emph{Proceedings of the third ACM
+  international conference on Web search and data mining}}. ACM,
+  \bibinfo{pages}{261--270}.
+\newblock
+
+
+\end{thebibliography}

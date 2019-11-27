@@ -1,4 +1,7 @@
 \documentclass[sigconf]{acmart}
+\usepackage{amsmath}
+
+%\usepackage{lipsum}
 
 %%
 %% \BibTeX command to typeset BibTeX logo in the docs
@@ -198,8 +201,31 @@
 \maketitle
 
 \section{Introduction}
+Social Networks have gained remarkable popularity in the past few decades. A huge
+number of people are using social networking sites like Facebook, Twitter, Google+, LinkedIn etc. The heavy reliance on social networking sites causes them to generate massive data. Online social networks play a major role in the diffusion of information~\cite{bakshy2012role}. Since social network has great influence on society, the recent focus is on extracting valuable information from this huge amount of data. Events, issues, interests etc. happen and evolve very quickly in social networks and their capture, understanding, visualization, and prediction are becoming critical expectations from both end-users and researchers. Therefore researchers in recent years have developed a variety of techniques and models to capture information diffusion in online social networks, analyze it, extract knowledge from it and predict it~\cite{agichtein2008finding,doerr2012rumors}. 
+
+Micro-blogging is an emerging form of communication. One of the most notable micro-blogging services is \emph{Twitter}. It allows \emph{twitterers} to publish tweets (with a limit of 140 characters). \emph{Twitter} employs a social-networking model called ``following'', in which each \emph{twitterer} is allowed to choose who she wants to follow without seeking any permission. Conversely, she may also be followed by others without granting permission first. In one instance of ``following'' relationship, the \emph{twitterer} whose updates are being followed is called the ``friend'', while the one who is following is called the ``follower''. \emph{Twitter} has gained huge popularity since the first day that it was launched~\cite{milstein2008twitter}. It has also drawn increasing interests from research community~\cite{cheng2009inside}. Many analysis have been done on the dataset of twitter including identification of the most influential spreader~\cite{pal2011identifying,weng2010twitterrank}. We discuss the state-of-art in details in the next section. 
+
+Information diffusion is a vast research domain and has attracted research interests from many fields, such as physics, biology, etc. The diffusion of innovation over a network is one of the original reasons for studying networks and the spread of disease among a population has been studied for centuries~\cite{anderson1992infectious,heesterbeek2000mathematical,keeling2008modeling}. The knowledge of the spreading pathways through the network of social interactions is crucial for developing efficient methods to either hinder spreading in the case of diseases, or accelerate diffusing in the case of information dissemination. The information diffusion model is based on three fundamental questions: \emph{(i) Which pieces of information diffuse the most, (ii) How, why and through which paths information is diffusing, and will be diffused in the future, (iii) Which members of the network play important roles in the spreading process?}
+
+In this paper we are mainly focusing on the third question. Identifying the most influential spreaders in a network is critical for ensuring efficient diffusion of information, which allows to control the outbreak of any kind of epidemic \cite{pastor2002immunization,PhysRevLett.91.247901}, utilize the limited resources to optimize the information propagation [20], successful e-commercial advertisements \cite{Leskovec:2007:DVM:1232722.1232727,lu2012recommender}, optimize the use of limited resources to facilitate information propagation \cite{chen2013information} etc. In large social network graph the nodes having the largest degree are often considered as the most influential spreader~\cite{pastor2001epidemic}. However, recent studies have shown that the most connected people are not the most influential spreader. Kitsak et al.~\cite{kitsak2010identification} showed that the best spreaders are not necessarily the most connected people in the network. They found that the most efficient spreaders are those located within the core of the network as identified by the $k$-core decomposition analysis~\cite{seidman1983network}. Moreover, many centrality measures have been proposed to identify the most influential spreaders on a social network. All these metrics are mainly of two kinds: global and local metrics. 
+Local metrics like degree centrality and K-core decomposition are of simple complexity but are less effective i.e. they fail to find the most influential spreaders accurately since of omitting the global structure of the network. Global metrics such as betweenness centrality and closeness centrality perform well in the identification of the influential nodes. However, these global measures incur high computational complexity which make them infeasible to use in case of large graph \cite{Newman:2010:NI:1809753, fortunato2010community}. The state-of-the-art of different methods of finding most significant nodes in a network has been discussed in the paper of L\"u et al. \cite{lu2016vital} reviewed the state of the art of different proposed methods and approaches dealing with detection of vital nodes in complex networks. Moreover, available methods are compared based on the different nature of the network. 
+
+%Different methods can perform well based on the objective functions such as the betweenness centrality performs well in controlling epidemic spreading while in the SIR process, the degree centrality can better identify influential spreaders when the spreading rate is very small and the eigenvector centrality performs better when the spreading rate is close to the epidemic threshold. Kitsak et al.7 put forward a fast node ranking method called k-shell decomposition for large-scale networks. They argued that the node influence should be determined by the location of the node in the network. The nodes in the
+
+Liu et al. \cite{liu2015improving} provided an improved method of using k-shell decomposition by removing the redundant links which have a low diffusion significance. Another improved method of k-shell decomposition was proposed by Wang et al.\cite{wang2016fast} who used k-shell iteration factor to evaluate the influence capability of a node. They used the iteration information of k-shell decomposition to distinguish among the nodes with the same maximum k-shell value.
+
+Node of the existing methods take the user info into consideration while identifying the most influential spreaders which obviously play vital role for information spreading. On top of that, with the ubiquitous use of social network, social networks are producing large amount of data. The higher the number of nodes and their friend-follower relationship data is available, the more the graph becomes suitable to identify the real most influential spreaders. However, we need special kind of 
+
+
+We propose a variant of $k$-core decomposition which is distributed and also incorporates the node information. Summarizing, our main contributions are:
+
+\begin{itemize}
+	\item  
+\end{itemize} 
 
 \section{Technical Background}
+
 
 \subsection{Centrality Measurement}
 \subsubsection{Degree Centrality}
@@ -211,9 +237,45 @@
 
 \subsubsection{Eigen Vector Centrality}
 
+\subsection{K-Core Decompostion}
+
+\subsection{Susceptible-Infected-Recovered (SIR) Model}
+The SIR model is one of the simplest compartmental models in epidemiology. In an SIR model, every mode of a network can be at one of the following three states:
+\begin{itemize}
+	\item S (Susceptible): These denotes those people who have not been infected with the disease yet. However, they are not immune to it and therefore they are under thread of being infected with the disease in the future.
+	\item I (Infected): These are people who have already been infected with the disease. Moreover, the infected people can transmit the disease to the susceptible neighbors with a probability of $\beta$.
+	\item R (Recovered): These people have been recovered from the disease with a probability of $\gamma$ and are immune now. Therefore, they are no longer under any thread to be infected with the disease in future.
+\end{itemize} 
+The SIR model runs the simulation of disease diffusion based on the topology of the network and the probability parameters $\beta$ and $\gamma$. The simulation stops when the network has no more infected nodes. This SIR model is capable of finding the most influential spreaders based on their sreadability. 
 
 \section{Related Work}
+An online social network (\emph{OSN}) results from the use of a social network site (\emph{SNS}) that allows the users to publish messages and connect to other users which result in creating social relationships. An OSN is formally represented by a graph, where nodes are users and edges are relationships that can be either directed or undirected. In this graph the nodes play an important role to disseminate information. Finding the most influential spreader in an OSN has caught attention of the researchers. Recently more and more attentions have been paid to microscopically study the \emph{spreadability} for each node. The knowledge of node \emph{spreadability} is crucial for developing efficient methods to either decelerate spreading in the case of diseases, or speed up spreading in the case of information flow. Moreover, it can be helpful for identifying the initial spreader of certain disease or information.
 
+Though the most connected nodes (hubs) and the nodes with high betweenness centrality are commonly believed to be the most influential spreaders in networks, the $k$-core (also called $k$-shell) method is found to perform better in identifying the best individual spreaders~\cite{kitsak2010identification,carmi2007model}. Basically, the principle of
+the $k$-core decomposition is to assign a core index $k_s$ to each node such that nodes with the lowest values are located at the periphery of the network while nodes with the highest values are located in the center of the network. We shall discuss the details about the algorithm shortly. 
+
+Cataldi et al.~\cite{cataldi2010emerging} proposed to use the well known PageRankalgorithm~\cite{page1999pagerank} to assess the distribution of influence throughout the network. The $PageRank$ value of a given node is proportional to the probability of visiting that node in a random walk of the social network, where the set of states of the random walk is the set of nodes. Both the methods only exploit the topology of the network, and ignore other important properties, such as nodes’ features and the way they process information. L\"u et al.~\cite{lu2011leaders} proposed the \emph{LeaderRank} algorithm to identify influential spreaders in directed networks, which is a simple variant of $PageRank$, namely a so-called ground node connected with every other node by a bidirectional link is introduced into the original network, and then the standard random walk process is applied to dig out influential spreaders. Li et al.~\cite{li2014identifying} further improved the $LeaderRank$ by allowing nodes with more fans get more scores from the ground node. With almost the same converging speed (we have checked by simulations), this so-called $Weighted LeaderRank$ performs better than $LeaderRank$.
+
+Romero et al.~\cite{romero2011influence} develop a graph-based approach similar to the well known HITS algorithm, IP(i.e. \emph{Influence-Passivity}), that assigns a relative $influence$ and a $passivity$ score to every users based on the ratio at which they forward information. However, no individual can be a universal influencer, and influential members of the network tend to be influential only in one or some specific domains of knowledge. Therefore, Palet al.~\cite{pal2011identifying} developed a non-graph based, topic-sensitive method. To do so, they define a set of nodal and topical features for characterizing the network members. Using probabilistic clustering over this feature space, they rank nodes with a within-cluster ranking procedure to identify the most influential and authoritative people for a given topic. Weng et al.~\cite{weng2010twitterrank} also develop a topic-sensitive version of the $PageRank$ algorithm dedicated to Twitter, \emph{TwitterRank}. They presented the phenomenon of $homophily$ in a community of Twitter. By making use of this phenomenon, a PageRank-like algorithm, called \emph{TwitterRank}, is proposed to measure the topic-sensitive influence of the \emph{twitterers}. 
+
+All these methods described are summarized in Table~\ref{tab:summary}. We can see that none of the above approach is distributed. Most famous approach for finding influential spreader is the $k$-core decomposition which considers only the network topology. We propose a distributed variant of the algorithm which also considers user info like no. of followers, no. of friends, whether the user is verified etc.
+
+
+\begin{table}[h]
+	\centering
+	\caption{Summary of influential spreaders identification methods}
+	\label{tab:summary}
+	\begin{tabular}{|l|c|l|l|l|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{Algorithm}} & \textbf{\begin{tabular}[c]{@{}c@{}}Network\\ Topology\end{tabular}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}User\\ Info\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Topic\\ Info\end{tabular}}} & \multicolumn{1}{c|}{\textbf{Distributed}} \\ \hline
+		$k$-core decomposition                     & Y                                                                   &                                                                                   &                                                                                    &                                           \\ \hline
+		PageRank                                 & Y                                                                   &                                                                                   &                                                                                    &                                           \\ \hline
+		Topic-sensitive PageRank                 & Y                                                                   &                                                                                   & \multicolumn{1}{c|}{Y}                                                             &                                           \\ \hline
+		IP                                       & \multicolumn{1}{l|}{}                                               & \multicolumn{1}{c|}{Y}                                                            &                                                                                    &                                           \\ \hline
+		Topical Authorities                      & \multicolumn{1}{l|}{}                                               & \multicolumn{1}{c|}{Y}                                                            & \multicolumn{1}{c|}{Y}                                                             &                                           \\ \hline
+	\end{tabular}
+	
+\end{table}
 
 \section{Experimental Setup}
 
@@ -227,7 +289,7 @@
 \section{Evaluation Metrics}
 \subsection{Rank Correlation Coefficient}
 
-In general, correlation analyses are bi-variate analyses that measure the strength of association between two variables and the direction of the relationship. In terms of the strength of relationship, the value of the correlation coefficient varies between $+1$ and $-1$. A value of $\pm 1$ indicates that there exists a perfect degree of association between the comparing two variables. As the correlation coefficient value goes towards $0$, this relationship between the two variables gets weaker. The $\pm$ sings of the coefficient indicated he direction of the relationship; a $+$ sign indicates a positive relationship while a $—$ sign indicates a negative relationship.
+In general, correlation analyses are bi-variate analyses that measure the strength of association between two variables and the direction of the relationship. In terms of the strength of relationship, the value of the correlation coefficient varies between $+1$ and $-1$. A value of $\pm 1$ indicates that there exists a perfect degree of association between the comparing two variables. As the correlation coefficient value goes towards $0$, this relationship between the two variables gets weaker. The $\pm$ sings of the coefficient indicated he direction of the relationship; a $+$ sign indicates a positive relationship while a $-$ sign indicates a negative relationship.
 
 %In general, correlation analyses measure the strength of the relationship between two variables. They assess statistical associations based on the ranks of the data. Correlation coefficients take the values between minus one and plus one. The positive correlation signifies that the ranks of both the variables are increasing.  On the other hand, the negative correlation signifies that as the rank of one variable is increased, the rank of the other variable is decreased.
 
@@ -276,18 +338,84 @@ Kendall Tau correlation co-efficient is denoted by $\tau$. If $L_1$ and $L_2$ ar
 \end{equation}
 
 \subsubsection{Spearman's Rank Correlation Co-efficient}
-Spearman’s Rank correlation coefficient is a technique which can be used to summarise the strength and direction (negative or positive) of a relationship between two variables.
-The result will always be between 1 and minus 1. Assume that $L_1$ and $L_2$ are two ranking of same $n$ elements. For any element $x$, if the ranking of $x$ in $L_1$ and $L_2$ are $rank\_in\_L_1(x)$
+Spearman’s Rank correlation coefficient, $R_s$ is a technique which can be used to summarize the strength and direction (negative or positive) of a relationship between two variables.
+The result will always be within 1 and minus 1. The closer $R_s$ is to $+1$ or $-1$, the stronger the likely correlation. A perfect positive correlation is $+1$ and a perfect negative correlation is $-1$. Assume that $L_1$ and $L_2$ are two rankings of same $n$ elements. For any element $x$, if the rankings of $x$ in $L_1$ and $L_2$ are $rank\_in\_L_1(x)$ and $rank\_in\_L_2(x)$ respectively, then the distance of ranks, $d = rank\_in\_L_1(x) - rank\_in\_L_2(x)$. This value is squared to remove any negative values and When written in mathematical notation the Spearman Rank formula looks like this:
 
-This technique initially finds the difference in the ranks ($d$) : This is the difference between the ranks of the two values on each row of the table. The rank of the second value (price) is subtracted from the rank of the first (distance from the museum).
-Square the differences (d²) To remove negative values and then sum them (d²).
+\begin{equation}
+R_s = 1-  \dfrac{6\sum d^2}{n^3-n}
+\end{equation}
  
 \subsubsection{Calculating Statistical Significance using Co-efficient Values}
+Statistical significance is a measure of whether any research outcome are meaningful or not. In the field of hypothesis testing of statistics, the term \textit{null hypothesis} is the default assumption that there is no association or relationship between two measured phenomena \cite{DictionaryofStatistics}. A result has statistical significance when it is very unlikely to have occurred given the null hypothesis \cite{myers2010developing}. To be specific, a significance level, $\alpha$ is set for the experiment which denotes the probability of the experiment rejecting the null hypothesis, given that the null hypothesis were assumed to be true \cite{dalgaard2011}; and the p-value of a result, $p$ is the probability of obtaining a result at least as extreme, given that the null hypothesis were true. The result is statistically significant, by the standards of the study, when the condition $p \leq \alpha$ holds\cite{johnson2013revised,redmond2001biostatistics,cumming2013understanding,krzywinski2013points,devore2011probability}.
+for the evaluation of our ranking method, we set the significance level to $5\%$.
+
+To measure the statistical significance of the result, we use the following formula to compute a $z$-value:
+
+\begin{equation}
+z = \dfrac{3 \times T \sqrt{n(n-1)}}{\sqrt{2(2N+5)}}
+\end{equation}
+
+where $T$ is the correlation co-efficient measured by the previously described techniques. Using the $z$-score, an area is found from a z-table. This area value is considered as the $p$-value,  of a result.
 
 
+\subsection{Normalized Discounted Cumulative Gain, $NDCG$}
+In this paper, we use Normalized Discounted Cumulative Gain, $NDCG$ which is one of the widely used techniques to evaluate ranking systems. Let $X$ represents the set of all users who generate a graph ne
+
+have a specific influence value, $t$ is a term in the query and our task is to retrieve top $M$ similar keywords $\{w_1, w_2, \cdots, w_M\}$. 
+
+\begin{itemize}
+	\item{\textbf{Normalized Discounted Cumulative Gain, $NDCG$}}
+	For term $t$, we define cumulative gain at rank position $M$ ($CG^t@M$) as:
+	\begin{equation}
+	CG^t@M = \sum_{i=1}^{M} sim_{jcn}(t, w_i)
+	\end{equation}
+	Discounted cumulative gain ($DCG$) penalizes each rating (similarity score) based on its rank in the results. 
+	\begin{equation}
+	DCG^t@M = \sum_{i=1}^{M} \frac{sim_{jcn}(t, w_i)}{\log{ (i+1)}}
+	\end{equation}
+	$NDCG$ is obtained by dividing $DCG$ by Ideal DCG ($IDCG$), which normalizes the gain within $[0,1]$. $IDCG$ is the $DCG$ of the best possible results based on the ground truth similarity scores. If for a term $t$, the top $r$ similar keywords are $w^{(I)}_1, w^{(I)}_2, \cdots, w^{(I)}_r$ based on $sim_{jcn}$ metric, then
+	\begin{equation}
+	IDCG^t@M = \sum_{i=1}^{r} \frac{sim_{jcn}(t, w^{(I)}_i)}{\log{ (i+1)}}
+	\end{equation}
+	Here $r$ is the number of top keywords with positive similarity score ($ r \le M$). 
+	\begin{equation}
+	 NDCG^t@M = \frac{DCG^t@M}{IDCG^t@M}
+	\end{equation}
+	Finally,
+	\begin{equation}
+	NDCG@M = \frac{1}{|X|} \sum_{t \in X} NDCG^t@M
+	\end{equation}
+	
+	\item{\textbf{Mean Average Precision, $MAP$}}
+	Let's define a binary similarity function between two terms $t_1$ and $t_2$:
+	\begin{equation}
+	sim^b_{jcn}(t_1, t_2)= 
+	\begin{cases}
+	1,& \text{if } sim_{jcn}> 0\\
+	0,              & \text{otherwise}
+	\end{cases}
+	\end{equation}
+	For a term $t$, the number of true positive results upto rank $i$, $TP^t@i = \sum_{j=1}^{i} sim^b_{jcn} (t, w_j)$. 
+	
+	The total number of true positive results, 
+	$TTP^t = \sum_{w \in X} sim^b_{jcn} (t, w)$. The average precision upto rank $M$ is defined as $AP^t@M$:
+	\begin{equation}
+	AP^t@M = \frac{1}{TTP^t} \sum_{i=1}^M \frac{TP^t@i}{i}
+	\end{equation}
+	Thereby,
+	\begin{equation}
+	MAP@M = \frac{1}{|X|} \sum_{w \in X} AP^w@M
+	\end{equation}
+	
+\end{itemize}
+
+%\lipsum
 
 \subsection{Infection Scale on SIR Model}
 
 
+\bibliographystyle{ACM-Reference-Format}
+
+\bibliography{bibliography.bib}
 
 \end{document}
