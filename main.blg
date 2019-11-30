@@ -15,6 +15,8 @@ Warning--empty address in agichtein2008finding
 Warning--empty address in anderson1992infectious
 Warning--empty publisher in bakshy2012role
 Warning--empty address in bakshy2012role
+Warning--empty publisher in cataldi2010emerging
+Warning--empty address in cataldi2010emerging
 Warning--no number and no volume in cheng2009inside
 Warning--page numbers missing in both pages and numpages fields in cheng2009inside
 Warning--empty address in cumming2013understanding
@@ -24,6 +26,7 @@ Warning--empty address in devore2011probability
 Warning--no journal in fortunato2010community
 Warning--no number and no volume in fortunato2010community
 Warning--page numbers missing in both pages and numpages fields in fortunato2010community
+Warning--no number and no volume in freeman1977set
 Warning--empty address in heesterbeek2000mathematical
 Warning--empty address in keeling2008modeling
 Warning--articleno or eid field, but no numpages field, in Leskovec:2007:DVM:1232722.1232727
@@ -31,50 +34,55 @@ Warning--page numbers missing in both pages and numpages fields in Leskovec:2007
 Warning--articleno or eid, but no pages or numpages field in Leskovec:2007:DVM:1232722.1232727
 Warning--empty address in milstein2008twitter
 Warning--no number and no volume in myers2010developing
+Warning--no journal in page1999pagerank
+Warning--no number and no volume in page1999pagerank
+Warning--page numbers missing in both pages and numpages fields in page1999pagerank
 Warning--empty publisher in pal2011identifying
 Warning--empty address in pal2011identifying
 Warning--empty address in redmond2001biostatistics
+Warning--empty publisher in romero2011influence
+Warning--empty address in romero2011influence
 Warning--empty publisher in weng2010twitterrank
 Warning--empty address in weng2010twitterrank
-You've used 31 entries,
+You've used 43 entries,
             5727 wiz_defined-function locations,
-            1491 strings with 20057 characters,
-and the built_in function-call counts, 35567 in all, are:
-= -- 4633
-> -- 1299
+            1556 strings with 21970 characters,
+and the built_in function-call counts, 50379 in all, are:
+= -- 6740
+> -- 1837
 < -- 4
-+ -- 413
-- -- 450
-* -- 2508
-:= -- 3683
-add.period$ -- 168
-call.type$ -- 31
-change.case$ -- 213
-chr.to.int$ -- 83
-cite$ -- 57
-duplicate$ -- 3046
-empty$ -- 2128
-format.name$ -- 524
-if$ -- 8610
++ -- 595
+- -- 618
+* -- 3556
+:= -- 5118
+add.period$ -- 228
+call.type$ -- 43
+change.case$ -- 301
+chr.to.int$ -- 95
+cite$ -- 77
+duplicate$ -- 4294
+empty$ -- 2995
+format.name$ -- 732
+if$ -- 12393
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 104
-newline$ -- 297
-num.names$ -- 248
-pop$ -- 1079
+missing$ -- 154
+newline$ -- 391
+num.names$ -- 344
+pop$ -- 1538
 preamble$ -- 1
-purify$ -- 491
+purify$ -- 687
 quote$ -- 0
-skip$ -- 1054
+skip$ -- 1481
 stack$ -- 0
-substring$ -- 2619
-swap$ -- 353
+substring$ -- 3674
+swap$ -- 502
 text.length$ -- 43
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 572
-warning$ -- 26
-while$ -- 245
+type$ -- 792
+warning$ -- 34
+while$ -- 324
 width$ -- 0
-write$ -- 582
-(There were 26 warnings)
+write$ -- 785
+(There were 34 warnings)

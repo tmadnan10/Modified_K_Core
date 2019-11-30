@@ -1,5 +1,16 @@
 \documentclass[sigconf]{acmart}
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+
+\usepackage{tcolorbox} % for graphics placeholders
+\newcommand{\graphicsplaceholder}[2]{%
+	\begin{tcolorbox}[valign=center,width=#1,height=#2,arc=0.5mm,auto outer arc]%
+		\centering%
+		\sf missing graphic%
+	\end{tcolorbox}%
+}
 
 %\usepackage{lipsum}
 
@@ -225,19 +236,112 @@ We propose a variant of $k$-core decomposition which is distributed and also inc
 \end{itemize} 
 
 \section{Technical Background}
+\subsection{Formal Definition of Twitter Social Network}
+The users of Twitter form a social network with their friend-follower relationship. There are several approaches to define any network formally. However, the mostly used and flexible definition can be formalized using the graph theory. That means the social network is conceptualized as a graph, i.e. a set of vertices (or nodes) representing the users of the social network and a set of edges (directed or undirected) representing social relationship between the incident vertices (users). In case of Twitter social media, we define the following two graphs:
+\begin{itemize}
+	\item \textbf{Friend-Follower graph}: which is created from the relationship between the users. In this graph, a vertex represents a user and there exists a directed edge from vertex $u$ to vertex $v$ if and only if the user represented by $v$ is a follower of the user represented by $u$. This also implies that the user represented by $u$ is a friend of the user represented by $v$. For simplicity, in several cases, these directed edges may be considered as undirected. Figure \ref{friend-follower graph} shows a sample friend-follower grpah of twitter social network. Here every node is labeled with the name of the user along with the twitter screen name. The bidirectional edges are shown in bold edges and they implies that the users represented by the incident vertices are following one another.   
+	\item \textbf{Tweet Graph}: which is created from the retweets. In this graph, a vertex represents a user and there exists an edge between two vertices if and only if one user retweets at least one of the other user's tweets. The edge should be directed to the retweeter from the user of the original tweet. For simplicity we may consider the edges as undirected.
 
+\end{itemize}
+ 
+\begin{figure}
+	\includegraphics[width=.5\textwidth]{friend_follower_graph.pdf}
+	\caption{sample Friend-Follower Graph of Twitter Social Network}
+	\label{friend-follower graph}
+\end{figure}
 
 \subsection{Centrality Measurement}
-\subsubsection{Degree Centrality}
+In graph theory, centrality is a term to describe importance of individual vertex within a graph or a network. The concept of centrality was first developed with an intention of doing social network analysis and there has been a lot of research works carried out in this topic for network analysis mainly to answer the question, ``Which vertices are the most influential in a graph?" There are several centrality measures which are very popular in graph analysis. These measures can be categorized in two types: local and global metrics. In this section, we briefly describe various local and global centrality metrics that are available to find the influential nodes from a graph network.
 
+\subsubsection{Local Centrality Measures}
+In general, local centrality measures use only the features of an individual node through the partial information around it. The number of neighbors (degree of a node) plays the main role in such local methods and they work better mainly for undirected networks. There are mainly two local centrality measures and they are described below:
 
-\subsubsection{Closeness Centrality}
+\begin{itemize}
+	\item \textbf{Degree Centrality}: Degree Centrality is the simplest centrality measure which assume that the node with the maximum neighbors possess the maximum influence on the network. The degree of the node $v_i$ signifies the total number of edges incident to it i.e. the number of neighbors. Assume that, a graph $G(V,E)$ where $V$ is a set of $n$ nodes and $E$ is the edge set, is represented by an $n\times n$ adjacency matrix $A = \{a_{ij}\}$, that is $\{a_{ij}\} = 1$ if nodes $v_i$ and $v_j$ are connected and $0$ otherwise. If the degree of node $v_i$ is denoted by $d_i$, then the degree centrality of node $v_i$ is:
+	
+	\begin{equation}
+	DC(v_i) = \dfrac{d_i}{n-1}
+	\label{degree centrality eq}
+	\end{equation}
+	
+	Here $n-1$ is the largest possible degree in $G$ and it is used as the numerator of the formula for normalization.
+	
+	The most important side of using degree centrality to find the most influential spreader on a network is its simplicity and low computational complexity. However, in most of the cases this measure fails to identify the most influential spreaders accurately. However, there are several use cases where degree centrality can provide surprisingly good performance such as with very small spreading rate, degree centrality is a better metric to identify the spreading influences of nodes than other well-known centrality metrics \cite{klemm2012measure,liu2016locating}.
+	
+	\item \textbf{K Core Decomposition}: Degree centrality only considers the number of the adjacent neighbors in order to assess the influence of a node in the network. However, Kitsak et al. \cite{kitsak2010identification} identified that the location of a node in a network has a more significant aspect in evaluating its spreading influence. Nodes located at the core of a network are more likely to have a higher influence rate than those located at the periphery. Therefore, they suggested that core value of a node is a better metric in finding most influential spreaders and the core value can be obtained by using the k-core (aka k-shell) decomposition \cite{dorogovtsev2006k} of the networks. 
+	
+	The $k$-shell method starts by removing all nodes having degree 1. The process is repeated until there is no node of degree 1 exists in the network. These pruned nodes are assigned into the 1-shell. After assigning the 1-shell, all nodes with residual degree 2 are recursively removed and the 2-shell are created. This procedure continues as the residual degree increases until all nodes in the nodes have been assigned to one of the shells. The nodes with high $k$-shell value tend to locate in the center of the network and the spreading starting from each of these nodes are likely to widely cover the network. In this way all nodes are assigned a \emph{k} (sometimes refereed to as $k_s$) value. Figure~\ref{fig:k core} presents a sample network and the $k_s$ value for the nodes by this algorithm. The algorithm is very simple and robust. 
+	
+	\begin{figure*}[htpb]
+		\centering
+		\subfloat[]{
+			\includegraphics[width=.4\textwidth,page=1]{k_core.pdf}
+			%\graphicsplaceholder{4cm}{1cm}
+			\label{first-subfig}
+		}
+		\subfloat[]{
+			%\graphicsplaceholder{4cm}{1cm}
+			\includegraphics[width=.4\textwidth,page=2]{k_core.pdf}
+			\label{ks=1}
+		}
+		\\
+		\subfloat[]{
+			%\graphicsplaceholder{4cm}{1cm}
+			\includegraphics[width=.4\textwidth,page=3]{k_core.pdf}
+			\label{ks=2}
+		}
+		\subfloat[]{
+			%\graphicsplaceholder{4cm}{1cm}
+			\includegraphics[width=.4\textwidth,page=4]{k_core.pdf}
+			\label{ks=3}
+		}
+		\caption{A sample network with $k_s$ value of the nodes}
+		\label{k core}
+	\end{figure*}
+	However, k core decomposition method has a tendency to assign the same $k_s$ value to multiple nodes in case of large networks. Therefore, the hypothesis of declaring the node(s) of the largest $k_s$ value i.e. the node(s) of the innermost shell to be the most influential results in a good number of nodes with the same spreadabilty and that may not be the desired outcome in many cases. However, the simplicity and lower computational complexity make this metric very useful to find the most influential nodes on a network and in this paper, we extend this idea and propose a modified k core decomposition method that can accurately find the most influential spreaders on a social network with very lower computational complexity.
+\end{itemize}
 
-\subsubsection{Betweenness Centrality}
+\subsubsection{Global Centrality Measures}
+Global centrality measures consider the whole network during its computation. There exists many different types of global centrality measures and each of them addresses slightly different properties of the network and the nodes in order to compute the centrality value. Two mostly used global centrality measures are closeness and betweenness centralities and they are described briefly below:
+\begin{itemize}
+	\item \textbf{Closeness Centrality}:
+	As the name suggests, closeness centrality measures how close a node is from all other nodes in a network. In case of a connected graph, the normalized closeness centrality of a node is the average length of the shortest path between the node and all other nodes in the network. Let $d_{ij}$ be the length of shortest path between node $v_i$ and $v_j$, $n$ be the number of nodes of the network, then the average shortest distance of node $v_i$ will be \cite{sabidussi1966centrality},
+	\begin{equation}
+	Avg_i = \dfrac{1}{n-1} \sum_{i \neq j}d_{ij}
+	\label{average shortest distance equation}
+	\end{equation}
+	Since the centrality measure is intended to find the most closer nodes, the closeness centrality of node $v_i$ is inversely proportional to the average shortest distance, $Avg_i$ and can be defined as,
+	\begin{equation}
+	CC(v_i) = \dfrac{n-1}{\sum_{i \neq j}d_{ij}}
+	\label{closeness centrality eq}
+	\end{equation} 
+	
+	However, this equation will not be suitable to use in case disconnected graph where some node may be unreachable from the considering node $v_i$. Wasserman and Faust \cite{opsahl2010node} proposed an improved formula for graphs with
+	more than one connected component. The result is ``a ratio of the
+	fraction of nodes in the network which are reachable, to the average
+	distance" from the reachable nodes. Let $n_r$ be the number of reachable nodes in the network from node $v_i$, then the modified formula of measuring closeness centrality is,
+	\begin{equation}
+	CC(v_i) = \dfrac{n_1-1}{n-1} \dfrac{n_1-1}{\sum_{i \neq j}d_{ij}}
+	\label{closeness centrality eq modified}
+	\end{equation}  
+	\item \textbf{Betweenness Centrality}:
+	Betweenness centrality determines how many times a node falls along the shortest path between two different nodes i.e. acts as a bridge between those two nodes. 
+	Linton Freeman \cite{freeman1977set} introduces this measure for quantifying the control of a human on the communication between other humans in a social network. 
+	
+	For starting node $v_s$ and destination node $v_t$ and the input node $v_i$ that holds the condition $v_s \neq v_t \neq v_i$, let $n_{st}^i$ be $1$ if node $v_i$ lies on the shortest path between $v_s$ and $v_t$; and $0$ otherwise. So the betweenness centrality is defined as:
+	
+	\begin{equation}
+	BC(v_i) = \sum_{st}n_{st}^i
+	\end{equation}
 
-\subsubsection{Eigen Vector Centrality}
-
-\subsection{K-Core Decompostion}
+	However, there can be more than one shortest path between $v_s$ and $v_t$ and that will count for centrality measure more than once. Thus, if total number of shortest paths between $v_s$ and $v_t$ is $g_{st}$, the updated equation for finding betweenness centrality of node $v_i$ will be,
+	
+	\begin{equation}
+	BC(v_i) = \sum_{st} \dfrac{n_{st}^i}{g_{st}}
+	\label{betweenness centrality eq}
+	\end{equation}	
+	
+\end{itemize} 
 
 \subsection{Susceptible-Infected-Recovered (SIR) Model}
 The SIR model is one of the simplest compartmental models in epidemiology. In an SIR model, every mode of a network can be at one of the following three states:
@@ -277,16 +381,28 @@ All these methods described are summarized in Table~\ref{tab:summary}. We can se
 	
 \end{table}
 
-\section{Experimental Setup}
 
-\subsection{Datasets}
-
-
-\section{Evaluation}
 
 
 
 \section{Evaluation Metrics}
+In this section, we briefly present the metrics we use to evaluate the merit our proposed ranking technique against the already established ones. In the following two sections, we present the environment we use to to run our experiments, present the datasets we use to cross check the  and discuss the out 
+\subsection{Modified Jaccard Similarity Coefficient}
+Jaccard similarity coefficient measures the similarity between two finite sets which is defined as the ratio of the intersection to the size of the union of the sample sets. Therefore, for two comparing sets $A$ and $B$, the Jaccard similarity coefficient $J(A,B)$ is,
+
+\begin{equation}
+J(A,B) = \dfrac{|A \cap B|}{|A \cup B|}
+\end{equation}
+
+In this paper, we intend to measure the similarity of top $n$ items from two different rankings. Therefore, if $A$ and $B$ is the two comparing rankings, $A_n$ and $B_n$ are subsets of $A$ and $B$ respectively with top $n$ elements, then we define modified Jaccard similarity coeefiicient $J_m(A,B)@n$ as follows,
+
+\begin{equation}
+J_m(A,B)@n = \dfrac{|A_n \cap B_n|}{n}
+\label{modified jaccard index}
+\end{equation}
+We use this modified metric mainly to test the proportion of the common users in the two $n$ sized sets of the most influential users obtained from the two comparing ranking algorithms. While comparing with a established method, the higher the overlap is, the more reliable the comparing ranking algorithm.
+
+
 \subsection{Rank Correlation Coefficient}
 
 In general, correlation analyses are bi-variate analyses that measure the strength of association between two variables and the direction of the relationship. In terms of the strength of relationship, the value of the correlation coefficient varies between $+1$ and $-1$. A value of $\pm 1$ indicates that there exists a perfect degree of association between the comparing two variables. As the correlation coefficient value goes towards $0$, this relationship between the two variables gets weaker. The $\pm$ sings of the coefficient indicated he direction of the relationship; a $+$ sign indicates a positive relationship while a $-$ sign indicates a negative relationship.
@@ -297,9 +413,9 @@ In general, correlation analyses are bi-variate analyses that measure the streng
 
 In Section \ref{?}, we measure the correlation of the ranked list of users based on their spreadability generated by our modified K core decomposition against the rankings generated by other methods. We use two non-parametric rank correlations: Kendall’s tau and Spearman’s rank correlation coefficient.
 
-\subsubsection{Kendall Tau Correlation Co-efficient}
+\subsubsection{Kendall Tau Correlation Coefficient}
 
-The Kendall tau rank correlation co-efficient is used to test the similarities in the ordering of data when it is ranked by quantities. While other types of correlation coefficients use the observations as the basis of the correlation, Kendall’s correlation coefficient uses pairs of observations and determines the strength of association based on the patter on concordance and discordance between the pairs. Assume that $L_1$ and $L_2$ are the two rankings that are to be compared. Then Kendall analysis takes the following two properties into consideration:
+The Kendall tau rank correlation coefficient is used to test the similarities in the ordering of data when it is ranked by quantities. While other types of correlation coefficients use the observations as the basis of the correlation, Kendall’s correlation coefficient uses pairs of observations and determines the strength of association based on the patter on concordance and discordance between the pairs. Assume that $L_1$ and $L_2$ are the two rankings that are to be compared. Then Kendall analysis takes the following two properties into consideration:
 
 \begin{itemize}
     \item \textbf{Concordant}: Any pair of items $(x_1,y_1)$ in $L_1$ and $(x_2,y_2)$ in $L_2$ are considered as concordant if and only if they meet one of the following two conditions:
@@ -412,6 +528,26 @@ have a specific influence value, $t$ is a term in the query and our task is to r
 %\lipsum
 
 \subsection{Infection Scale on SIR Model}
+
+
+\section{Experimental Setup}
+
+\subsection{Datasets Used}
+
+\subsection{Algorithms Compared}
+
+
+\section{Experimental Outcome and Evaluation}
+
+\subsection{Simulation on SIR Model}
+To simulate the SIR model to depict the disease diffusion based on the topology of our experimental datasets. For each method, the SIR model is simulated on the same dataset for five (5) times so that a steady result is obtained. 
+
+\section{Future Work}
+
+\section{Acknowledgment}
+
+
+\section{Conclusion}
 
 
 \bibliographystyle{ACM-Reference-Format}

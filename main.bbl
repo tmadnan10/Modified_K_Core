@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{31}
+\begin{thebibliography}{43}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -70,6 +70,34 @@
 \newblock \showarticletitle{The role of social networks in information
   diffusion}. In \bibinfo{booktitle}{\emph{Proceedings of the 21st
   international conference on World Wide Web}}. ACM, \bibinfo{pages}{519--528}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Carmi, Havlin, Kirkpatrick, Shavitt, and
+  Shir}{Carmi et~al\mbox{.}}{2007}]%
+        {carmi2007model}
+\bibfield{author}{\bibinfo{person}{Shai Carmi}, \bibinfo{person}{Shlomo
+  Havlin}, \bibinfo{person}{Scott Kirkpatrick}, \bibinfo{person}{Yuval
+  Shavitt}, {and} \bibinfo{person}{Eran Shir}.}
+  \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{A model of Internet topology using k-shell
+  decomposition}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the National Academy of
+  Sciences}} \bibinfo{volume}{104}, \bibinfo{number}{27}
+  (\bibinfo{year}{2007}), \bibinfo{pages}{11150--11154}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cataldi, Di~Caro, and Schifanella}{Cataldi
+  et~al\mbox{.}}{2010}]%
+        {cataldi2010emerging}
+\bibfield{author}{\bibinfo{person}{Mario Cataldi}, \bibinfo{person}{Luigi
+  Di~Caro}, {and} \bibinfo{person}{Claudio Schifanella}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Emerging topic detection on twitter based on
+  temporal and social terms evaluation}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the Tenth International Workshop on
+  Multimedia Data Mining}}. ACM, \bibinfo{pages}{4}.
 \newblock
 
 
@@ -158,6 +186,19 @@ Issue 24.
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Dorogovtsev, Goltsev, and Mendes}{Dorogovtsev
+  et~al\mbox{.}}{2006}]%
+        {dorogovtsev2006k}
+\bibfield{author}{\bibinfo{person}{Sergey~N Dorogovtsev},
+  \bibinfo{person}{Alexander~V Goltsev}, {and} \bibinfo{person}{Jose Ferreira~F
+  Mendes}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{K-core organization of complex networks}.
+\newblock \bibinfo{journal}{\emph{Physical review letters}}
+  \bibinfo{volume}{96}, \bibinfo{number}{4} (\bibinfo{year}{2006}),
+  \bibinfo{pages}{040601}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Draper}{Draper}{2011}]%
         {DictionaryofStatistics}
 \bibfield{author}{\bibinfo{person}{Norman~R. Draper}.}
@@ -180,6 +221,17 @@ Issue 24.
   \bibinfo{year}{2010}\natexlab{}.
 \newblock \showarticletitle{Community detection in graphs. Phys. Rep}.
 \newblock  (\bibinfo{year}{2010}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Freeman}{Freeman}{1977}]%
+        {freeman1977set}
+\bibfield{author}{\bibinfo{person}{Linton~C Freeman}.}
+  \bibinfo{year}{1977}\natexlab{}.
+\newblock \showarticletitle{A set of measures of centrality based on
+  betweenness}.
+\newblock \bibinfo{journal}{\emph{Sociometry}} (\bibinfo{year}{1977}),
+  \bibinfo{pages}{35--41}.
 \newblock
 
 
@@ -230,6 +282,20 @@ Issue 24.
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Klemm, Serrano, Egu{\'\i}luz, and
+  San~Miguel}{Klemm et~al\mbox{.}}{2012}]%
+        {klemm2012measure}
+\bibfield{author}{\bibinfo{person}{Konstantin Klemm},
+  \bibinfo{person}{M~{\'A}ngeles Serrano}, \bibinfo{person}{V{\'\i}ctor~M
+  Egu{\'\i}luz}, {and} \bibinfo{person}{Maxi San~Miguel}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{A measure of individual role in collective
+  dynamics}.
+\newblock \bibinfo{journal}{\emph{Scientific reports}}  \bibinfo{volume}{2}
+  (\bibinfo{year}{2012}), \bibinfo{pages}{292}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Krzywinski and Altman}{Krzywinski and
   Altman}{2013}]%
         {krzywinski2013points}
@@ -256,6 +322,33 @@ Issue 24.
 \urldef\tempurl%
 \url{https://doi.org/10.1145/1232722.1232727}
 \showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Li, Zhou, L{\"u}, and Chen}{Li
+  et~al\mbox{.}}{2014}]%
+        {li2014identifying}
+\bibfield{author}{\bibinfo{person}{Qian Li}, \bibinfo{person}{Tao Zhou},
+  \bibinfo{person}{Linyuan L{\"u}}, {and} \bibinfo{person}{Duanbing Chen}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Identifying influential spreaders by weighted
+  leaderrank}.
+\newblock \bibinfo{journal}{\emph{Physica A: Statistical Mechanics and its
+  Applications}}  \bibinfo{volume}{404} (\bibinfo{year}{2014}),
+  \bibinfo{pages}{47--55}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Liu, Lin, Guo, and Zhou}{Liu
+  et~al\mbox{.}}{2016}]%
+        {liu2016locating}
+\bibfield{author}{\bibinfo{person}{Jian-Guo Liu}, \bibinfo{person}{Jian-Hong
+  Lin}, \bibinfo{person}{Qiang Guo}, {and} \bibinfo{person}{Tao Zhou}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Locating influential nodes via dynamics-sensitive
+  centrality}.
+\newblock \bibinfo{journal}{\emph{Scientific reports}}  \bibinfo{volume}{6}
+  (\bibinfo{year}{2016}), \bibinfo{pages}{21380}.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Liu, Tang, Zhou, and Do}{Liu
@@ -297,6 +390,18 @@ Issue 24.
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{L{\"u}, Zhang, Yeung, and Zhou}{L{\"u}
+  et~al\mbox{.}}{2011}]%
+        {lu2011leaders}
+\bibfield{author}{\bibinfo{person}{Linyuan L{\"u}}, \bibinfo{person}{Yi-Cheng
+  Zhang}, \bibinfo{person}{Chi~Ho Yeung}, {and} \bibinfo{person}{Tao Zhou}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Leaders in social networks, the delicious case}.
+\newblock \bibinfo{journal}{\emph{PloS one}} \bibinfo{volume}{6},
+  \bibinfo{number}{6} (\bibinfo{year}{2011}), \bibinfo{pages}{e21202}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Milstein, Lorica, Magoulas, Hochmuth,
   Chowdhury, and O'Reilly}{Milstein et~al\mbox{.}}{2008}]%
         {milstein2008twitter}
@@ -331,6 +436,31 @@ Issue 24.
   \bibinfo{address}{New York, NY, USA}.
 \newblock
 \showISBNx{0199206651, 9780199206650}
+
+
+\bibitem[\protect\citeauthoryear{Opsahl, Agneessens, and Skvoretz}{Opsahl
+  et~al\mbox{.}}{2010}]%
+        {opsahl2010node}
+\bibfield{author}{\bibinfo{person}{Tore Opsahl}, \bibinfo{person}{Filip
+  Agneessens}, {and} \bibinfo{person}{John Skvoretz}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Node centrality in weighted networks: Generalizing
+  degree and shortest paths}.
+\newblock \bibinfo{journal}{\emph{Social networks}} \bibinfo{volume}{32},
+  \bibinfo{number}{3} (\bibinfo{year}{2010}), \bibinfo{pages}{245--251}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Page, Brin, Motwani, and Winograd}{Page
+  et~al\mbox{.}}{1999}]%
+        {page1999pagerank}
+\bibfield{author}{\bibinfo{person}{Lawrence Page}, \bibinfo{person}{Sergey
+  Brin}, \bibinfo{person}{Rajeev Motwani}, {and} \bibinfo{person}{Terry
+  Winograd}.} \bibinfo{year}{1999}\natexlab{}.
+\newblock \showarticletitle{The PageRank citation ranking: bringing order to
+  the web.}
+\newblock  (\bibinfo{year}{1999}).
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Pal and Counts}{Pal and Counts}{2011}]%
@@ -373,6 +503,28 @@ Issue 24.
   \bibinfo{person}{Theodore Colton}.} \bibinfo{year}{2001}\natexlab{}.
 \newblock \bibinfo{booktitle}{\emph{Biostatistics in clinical trials}}.
 \newblock \bibinfo{publisher}{John Wiley \& Sons}. 35--36 pages.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Romero, Galuba, Asur, and Huberman}{Romero
+  et~al\mbox{.}}{2011}]%
+        {romero2011influence}
+\bibfield{author}{\bibinfo{person}{Daniel~M Romero}, \bibinfo{person}{Wojciech
+  Galuba}, \bibinfo{person}{Sitaram Asur}, {and} \bibinfo{person}{Bernardo~A
+  Huberman}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Influence and passivity in social media}. In
+  \bibinfo{booktitle}{\emph{Joint European Conference on Machine Learning and
+  Knowledge Discovery in Databases}}. Springer, \bibinfo{pages}{18--33}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Sabidussi}{Sabidussi}{1966}]%
+        {sabidussi1966centrality}
+\bibfield{author}{\bibinfo{person}{Gert Sabidussi}.}
+  \bibinfo{year}{1966}\natexlab{}.
+\newblock \showarticletitle{The centrality index of a graph}.
+\newblock \bibinfo{journal}{\emph{Psychometrika}} \bibinfo{volume}{31},
+  \bibinfo{number}{4} (\bibinfo{year}{1966}), \bibinfo{pages}{581--603}.
 \newblock
 
 
