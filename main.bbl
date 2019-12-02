@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{43}
+\begin{thebibliography}{51}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -50,6 +50,17 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Ahajjam and Badir}{Ahajjam and Badir}{2018}]%
+        {ahajjam2018identification}
+\bibfield{author}{\bibinfo{person}{Sara Ahajjam} {and} \bibinfo{person}{Hassan
+  Badir}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Identification of influential spreaders in complex
+  networks using HybridRank algorithm}.
+\newblock \bibinfo{journal}{\emph{Scientific reports}} \bibinfo{volume}{8},
+  \bibinfo{number}{1} (\bibinfo{year}{2018}), \bibinfo{pages}{11932}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Anderson, May, and Anderson}{Anderson
   et~al\mbox{.}}{1992}]%
         {anderson1992infectious}
@@ -70,6 +81,20 @@
 \newblock \showarticletitle{The role of social networks in information
   diffusion}. In \bibinfo{booktitle}{\emph{Proceedings of the 21st
   international conference on World Wide Web}}. ACM, \bibinfo{pages}{519--528}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Batagelj and Zaver{\v{s}}nik}{Batagelj and
+  Zaver{\v{s}}nik}{2011}]%
+        {batagelj2011fast}
+\bibfield{author}{\bibinfo{person}{Vladimir Batagelj} {and}
+  \bibinfo{person}{Matja{\v{z}} Zaver{\v{s}}nik}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Fast algorithms for determining (generalized) core
+  groups in social networks}.
+\newblock \bibinfo{journal}{\emph{Advances in Data Analysis and
+  Classification}} \bibinfo{volume}{5}, \bibinfo{number}{2}
+  (\bibinfo{year}{2011}), \bibinfo{pages}{129--145}.
 \newblock
 
 
@@ -164,6 +189,17 @@ Issue 24.
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Dean and Ghemawat}{Dean and Ghemawat}{2008}]%
+        {dean2008mapreduce}
+\bibfield{author}{\bibinfo{person}{Jeffrey Dean} {and} \bibinfo{person}{Sanjay
+  Ghemawat}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{MapReduce: simplified data processing on large
+  clusters}.
+\newblock \bibinfo{journal}{\emph{Commun. ACM}} \bibinfo{volume}{51},
+  \bibinfo{number}{1} (\bibinfo{year}{2008}), \bibinfo{pages}{107--113}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Devore}{Devore}{2011}]%
         {devore2011probability}
 \bibfield{author}{\bibinfo{person}{Jay~L Devore}.}
@@ -232,6 +268,21 @@ Issue 24.
   betweenness}.
 \newblock \bibinfo{journal}{\emph{Sociometry}} (\bibinfo{year}{1977}),
   \bibinfo{pages}{35--41}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Han, Daudjee, Ammar, {\"O}zsu, Wang, and
+  Jin}{Han et~al\mbox{.}}{2014}]%
+        {han2014experimental}
+\bibfield{author}{\bibinfo{person}{Minyang Han}, \bibinfo{person}{Khuzaima
+  Daudjee}, \bibinfo{person}{Khaled Ammar}, \bibinfo{person}{M~Tamer {\"O}zsu},
+  \bibinfo{person}{Xingfang Wang}, {and} \bibinfo{person}{Tianqi Jin}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{An experimental comparison of pregel-like graph
+  processing systems}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{7}, \bibinfo{number}{12} (\bibinfo{year}{2014}),
+  \bibinfo{pages}{1047--1058}.
 \newblock
 
 
@@ -402,6 +453,42 @@ Issue 24.
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Malewicz, Austern, Bik, Dehnert, Horn, Leiser,
+  and Czajkowski}{Malewicz et~al\mbox{.}}{2010}]%
+        {malewicz2010pregel}
+\bibfield{author}{\bibinfo{person}{Grzegorz Malewicz},
+  \bibinfo{person}{Matthew~H Austern}, \bibinfo{person}{Aart~JC Bik},
+  \bibinfo{person}{James~C Dehnert}, \bibinfo{person}{Ilan Horn},
+  \bibinfo{person}{Naty Leiser}, {and} \bibinfo{person}{Grzegorz Czajkowski}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Pregel: a system for large-scale graph processing}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the 2010 ACM SIGMOD International
+  Conference on Management of data}}. ACM, \bibinfo{pages}{135--146}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Martella}{Martella}{2012}]%
+        {martella2012apache}
+\bibfield{author}{\bibinfo{person}{C Martella}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \bibinfo{title}{Apache Giraph: Distributed Graph Processing in the
+  Cloud}.
+\newblock
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Martella, Shaposhnik, Logothetis, and
+  Harenberg}{Martella et~al\mbox{.}}{2015}]%
+        {martella2015practical}
+\bibfield{author}{\bibinfo{person}{Claudio Martella}, \bibinfo{person}{Roman
+  Shaposhnik}, \bibinfo{person}{Dionysios Logothetis}, {and}
+  \bibinfo{person}{Steve Harenberg}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Practical Graph Analytics with Apache
+  Giraph}}.
+\newblock \bibinfo{publisher}{Springer}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Milstein, Lorica, Magoulas, Hochmuth,
   Chowdhury, and O'Reilly}{Milstein et~al\mbox{.}}{2008}]%
         {milstein2008twitter}
@@ -412,6 +499,19 @@ Issue 24.
 \newblock \bibinfo{booktitle}{\emph{Twitter and the micro-messaging revolution:
   Communication, connections, and immediacy--140 characters at a time}}.
 \newblock \bibinfo{publisher}{O'Reilly Media, Incorporated}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Montresor, De~Pellegrini, and
+  Miorandi}{Montresor et~al\mbox{.}}{2013}]%
+        {montresor2013distributed}
+\bibfield{author}{\bibinfo{person}{Alberto Montresor},
+  \bibinfo{person}{Francesco De~Pellegrini}, {and} \bibinfo{person}{Daniele
+  Miorandi}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Distributed k-core decomposition}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on parallel and distributed
+  systems}} \bibinfo{volume}{24}, \bibinfo{number}{2} (\bibinfo{year}{2013}),
+  \bibinfo{pages}{288--300}.
 \newblock
 
 

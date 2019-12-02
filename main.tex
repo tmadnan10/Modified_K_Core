@@ -298,6 +298,7 @@ In general, local centrality measures use only the features of an individual nod
 		\caption{A sample network with $k_s$ value of the nodes}
 		\label{k core}
 	\end{figure*}
+
 	However, k core decomposition method has a tendency to assign the same $k_s$ value to multiple nodes in case of large networks. Therefore, the hypothesis of declaring the node(s) of the largest $k_s$ value i.e. the node(s) of the innermost shell to be the most influential results in a good number of nodes with the same spreadabilty and that may not be the desired outcome in many cases. However, the simplicity and lower computational complexity make this metric very useful to find the most influential nodes on a network and in this paper, we extend this idea and propose a modified k core decomposition method that can accurately find the most influential spreaders on a social network with very lower computational complexity.
 \end{itemize}
 
@@ -381,7 +382,12 @@ All these methods described are summarized in Table~\ref{tab:summary}. We can se
 	
 \end{table}
 
+\section{Our Proposed Modified K Core Decomposition Method}
 
+\subsection{Distributed K Core Decomposition}
+\label{distributed k core}
+Centralized algorithms for the $k$-core decomposition already exist~\cite{batagelj2011fast}. Their algorithm is based on the recursive deletion of vertexes (and edges incident to them)
+of degree less than $k$. The algorithm makes use of $bin-sort$, and can run in $O(max(m,n))$, which equals $O(m)$ for connected networks. However a distributed variant is very much needed because of two possible scenarios: the graph could be so large to not fit into a single host, due to memory restrictions; or its description could be inherently distributed over a collection of hosts, making it inconvenient to move each portion to a central site. Montresor et al.~\cite{montresor2013distributed} proposed a distributed algorithm for $k$-shell decomposition for very large graph. Their distributed algorithm is based on the property of locality of the $k$-core decomposition: due to the maximality of cores, the $coreness$ of node $u$ is the largest value $k$ such that $u$ has at least $k$ neighbors that belong to a $k$-core or a larger core. The locality property tells that the information about the $coreness$ of the neighbors of a node is sufficient to compute its own $coreness$. Based on this idea, the algorithm works as follows: each node produces an estimate of its own $coreness$ and communicates it to its neighbors; at the same time, it receives estimates from its neighbors and use them to recompute its own estimate; in the case of a change, the new value is sent to the neighbors and the process goes on until convergence.
 
 
 
@@ -527,12 +533,43 @@ have a specific influence value, $t$ is a term in the query and our task is to r
 
 %\lipsum
 
-\subsection{Infection Scale on SIR Model}
+\subsection{Infection Rate on SIR Model}
+We use two different metrics related to infection rate on SIR model to evaluate our proposed method. These metrics were introduced by Ahajjam et al. \cite{ahajjam2018identification} and are presented below:
+
+\subsubsection{Infection Rate Function}
+This metric is used in order to compare different method of finding most influential spreaders by simulating the network on SIR model with some of the top spreaders as initially affected ones. At any time $t$, the infection rate can be defined as,
+\begin{equation}
+IR(t) = \dfrac{N_I(t)+N_R(t)}{n}
+\label{infection rate eq}
+\end{equation}
+Where $IR(t)$ is infection rate at time $t$, $N_I(t)$ is number of infected nodes at time $t$, $N_R(t)$ is number of recovered nodes at time $t$ and $n$ is the total number of nodes.
+ 
+\subsubsection{Final Infection Rate}
+In order to investigate the fraction of nodes that is finally affected a metric $IR(t_{max})$ is used. When the simulation reaches a steady state, if $N_R(t_max)$ is the number of finally recovered nodes, then this metric can be defined as,
+\begin{equation}
+IR(t_{max}) = \dfrac{N_R(t_{max})}{n}
+\label{infection rate eq}
+\end{equation}
+
+
+
 
 
 \section{Experimental Setup}
+As we already have discussed, the global methods of finding most influential spreaders take large amount of time to generate the final result. Therefore, to evaluate the performance of our proposed modified K core decomposition method of finding most influential spreaders on twitter social network, we need to keep the size of the dataset considerably small. On the other hand, we run the experiments with on a distributed environment with large scaled network data which fails to run on a single computer because of memory overflow and/or take infeasible amount of time due to larger computational complexity. Consequently, we run our experiments on two different environments and they are described below:
+
+\subsection{Cross Validation on a Single Computer}
+
+
+\subsection{Large Network Analysis on Distributed Environment}
+A number of related works for the distributed and/or parallel processing of graph structures has been presented in the literature. One popular framework for massively parallelizing
+computational tasks is MapReduce~\cite{dean2008mapreduce}, introduced by Google in 2004 for the parallel processing of large data-sets. While Map-Reduce can be used for processing graphs, its structure is not optimized for such tasks. This is the reason that led Google researchers to develop another framework, called Pregel~\cite{malewicz2010pregel} which is optimized for mining graphs data~\cite{han2014experimental}. Apache Giraph~\cite{martella2012apache,martella2015practical} is the open source version of Pregel built on top of hadoop. The main idea of Giraph is ``think like a vertex''. The computation in Giraph consists of a sequence of iterations, called supersteps, during which the framework runs a user-defined function on each vertex. In this function, a node receives messages from neighbor nodes sent during the previous superstep, modifies its local state and sends messages to its neighbor nodes, to be received in the next superstep. Barrier synchronization is used, so that each superstep is separated from the next one. Individual nodes may leave the computation when they have reached the convergence to their final state.
+We use Apache Giraph for implementing distributed $k$-core decomposition algorithm as described in the previous subsection \ref{distributed k core}.
+
 
 \subsection{Datasets Used}
+In order to test the performance of our proposed modified K core decomposition method of finding most influential spreaders on twitter social network, we mainly use *** real twitter datasets. Since we compare the ranking generated by our proposed method with that of the global techniques and the global techniques take too much time to generate the results, we consider multiple subsets of the main datasets with smaller number of nodes and edges. Below we briefly describe the datasets we use for evaluating our proposed method.
+
 
 \subsection{Algorithms Compared}
 
@@ -541,6 +578,36 @@ have a specific influence value, $t$ is a term in the query and our task is to r
 
 \subsection{Simulation on SIR Model}
 To simulate the SIR model to depict the disease diffusion based on the topology of our experimental datasets. For each method, the SIR model is simulated on the same dataset for five (5) times so that a steady result is obtained. 
+
+
+	
+\begin{figure*}[!htpb]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=.5\textwidth]{graphs/1.png}
+		%\graphicsplaceholder{4cm}{1cm}
+		\label{first-subfig}
+	}
+	\subfloat[]{
+		%\graphicsplaceholder{4cm}{1cm}
+		\includegraphics[width=.5\textwidth]{graphs/2.png}
+		\label{ks=1}
+	}
+	\\
+	\subfloat[]{
+		%\graphicsplaceholder{4cm}{1cm}
+		\includegraphics[width=.5\textwidth]{graphs/3.png}
+		\label{ks=2}
+	}
+	\subfloat[]{
+		%\graphicsplaceholder{4cm}{1cm}
+		\includegraphics[width=.5\textwidth]{graphs/4.png}
+		\label{ks=3}
+	}
+	\caption{A sample network with $k_s$ value of the nodes}
+	\label{k core}
+\end{figure*}
+
 
 \section{Future Work}
 
