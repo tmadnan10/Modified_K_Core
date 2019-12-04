@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{51}
+\begin{thebibliography}{55}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -297,6 +297,18 @@ Issue 24.
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Hopcroft, Lou, and Tang}{Hopcroft
+  et~al\mbox{.}}{2011}]%
+        {hopcroft2011will}
+\bibfield{author}{\bibinfo{person}{John Hopcroft}, \bibinfo{person}{Tiancheng
+  Lou}, {and} \bibinfo{person}{Jie Tang}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Who will follow you back?: reciprocal relationship
+  prediction}. In \bibinfo{booktitle}{\emph{Proceedings of the 20th ACM
+  international conference on Information and knowledge management}}. ACM,
+  \bibinfo{pages}{1137--1146}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Johnson}{Johnson}{2013}]%
         {johnson2013revised}
 \bibfield{author}{\bibinfo{person}{Valen~E Johnson}.}
@@ -358,6 +370,36 @@ Issue 24.
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Kwak, Lee, Park, and Moon}{Kwak
+  et~al\mbox{.}}{2010}]%
+        {Kwak10www}
+\bibfield{author}{\bibinfo{person}{Haewoon Kwak}, \bibinfo{person}{Changhyun
+  Lee}, \bibinfo{person}{Hosung Park}, {and} \bibinfo{person}{Sue Moon}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{{W}hat is {T}witter, a social network or a news
+  media?}. In \bibinfo{booktitle}{\emph{WWW '10: Proceedings of the 19th
+  international conference on World wide web}}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{591--600}.
+\newblock
+\showISBNx{978-1-60558-799-8}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1772690.1772751}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Lerman}{Lerman}{2010}]%
+        {Lerman2010}
+\bibfield{author}{\bibinfo{person}{Kristina Lerman}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Lerman Twitter 2010 Dataset}.
+\newblock  (\bibinfo{year}{2010}).
+\newblock
+\urldef\tempurl%
+\url{http://www.isi.edu/~lerman/downloads/twitter/twitter2010.html}
+\showURL{%
+\tempurl}
+
+
 \bibitem[\protect\citeauthoryear{Leskovec, Adamic, and Huberman}{Leskovec
   et~al\mbox{.}}{2007}]%
         {Leskovec:2007:DVM:1232722.1232727}
@@ -412,6 +454,20 @@ Issue 24.
   removing redundant links: From a perspective of spreading dynamics}.
 \newblock \bibinfo{journal}{\emph{Scientific reports}}  \bibinfo{volume}{5}
   (\bibinfo{year}{2015}), \bibinfo{pages}{13172}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Lou, Tang, Hopcroft, Fang, and Ding}{Lou
+  et~al\mbox{.}}{2013}]%
+        {lou2013learning}
+\bibfield{author}{\bibinfo{person}{Tiancheng Lou}, \bibinfo{person}{Jie Tang},
+  \bibinfo{person}{John Hopcroft}, \bibinfo{person}{Zhanpeng Fang}, {and}
+  \bibinfo{person}{Xiaowen Ding}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Learning to predict reciprocity and triadic closure
+  in social networks}.
+\newblock \bibinfo{journal}{\emph{ACM Transactions on Knowledge Discovery from
+  Data (TKDD)}} \bibinfo{volume}{7}, \bibinfo{number}{2}
+  (\bibinfo{year}{2013}), \bibinfo{pages}{5}.
 \newblock
 
 

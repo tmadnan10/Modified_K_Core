@@ -28,7 +28,12 @@ Warning--no number and no volume in fortunato2010community
 Warning--page numbers missing in both pages and numpages fields in fortunato2010community
 Warning--no number and no volume in freeman1977set
 Warning--empty address in heesterbeek2000mathematical
+Warning--empty publisher in hopcroft2011will
+Warning--empty address in hopcroft2011will
 Warning--empty address in keeling2008modeling
+Warning--no journal in Lerman2010
+Warning--no number and no volume in Lerman2010
+Warning--page numbers missing in both pages and numpages fields in Lerman2010
 Warning--articleno or eid field, but no numpages field, in Leskovec:2007:DVM:1232722.1232727
 Warning--page numbers missing in both pages and numpages fields in Leskovec:2007:DVM:1232722.1232727
 Warning--articleno or eid, but no pages or numpages field in Leskovec:2007:DVM:1232722.1232727
@@ -47,45 +52,45 @@ Warning--empty publisher in romero2011influence
 Warning--empty address in romero2011influence
 Warning--empty publisher in weng2010twitterrank
 Warning--empty address in weng2010twitterrank
-You've used 51 entries,
+You've used 55 entries,
             5727 wiz_defined-function locations,
-            1596 strings with 23410 characters,
-and the built_in function-call counts, 60084 in all, are:
-= -- 8031
-> -- 2223
+            1618 strings with 24261 characters,
+and the built_in function-call counts, 64890 in all, are:
+= -- 8587
+> -- 2399
 < -- 4
-+ -- 725
-- -- 754
-* -- 4256
-:= -- 6129
-add.period$ -- 269
-call.type$ -- 51
-change.case$ -- 360
-chr.to.int$ -- 103
-cite$ -- 88
-duplicate$ -- 5098
-empty$ -- 3557
-format.name$ -- 896
-if$ -- 14754
++ -- 781
+- -- 823
+* -- 4605
+:= -- 6623
+add.period$ -- 289
+call.type$ -- 55
+change.case$ -- 389
+chr.to.int$ -- 107
+cite$ -- 97
+duplicate$ -- 5528
+empty$ -- 3858
+format.name$ -- 964
+if$ -- 15884
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 181
-newline$ -- 454
-num.names$ -- 408
-pop$ -- 1818
+missing$ -- 199
+newline$ -- 492
+num.names$ -- 440
+pop$ -- 1987
 preamble$ -- 1
-purify$ -- 818
+purify$ -- 883
 quote$ -- 0
-skip$ -- 1772
+skip$ -- 1917
 stack$ -- 0
-substring$ -- 4399
-swap$ -- 597
-text.length$ -- 43
+substring$ -- 4773
+swap$ -- 640
+text.length$ -- 69
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 947
-warning$ -- 37
-while$ -- 388
+type$ -- 1039
+warning$ -- 42
+while$ -- 416
 width$ -- 0
-write$ -- 920
-(There were 37 warnings)
+write$ -- 996
+(There were 42 warnings)
