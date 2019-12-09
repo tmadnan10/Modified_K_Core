@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{55}
+\begin{thebibliography}{57}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -36,6 +36,17 @@
 \providecommand\bibinfo[2]{#2}
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{??}{eon}{[n.d.]}]%
+        {eon}
+ \bibinfo{year}{[n.d.]}\natexlab{}.
+\newblock \bibinfo{title}{{Epidemics on Networks}}.
+\newblock
+  \bibinfo{howpublished}{\url{https://epidemicsonnetworks.readthedocs.io/en/latest/index.html}}.
+\newblock
+\newblock
+\shownote{[Online; accessed 07-December-2019].}
+
 
 \bibitem[\protect\citeauthoryear{Agichtein, Castillo, Donato, Gionis, and
   Mishne}{Agichtein et~al\mbox{.}}{2008}]%
@@ -269,6 +280,21 @@ Issue 24.
 \newblock \bibinfo{journal}{\emph{Sociometry}} (\bibinfo{year}{1977}),
   \bibinfo{pages}{35--41}.
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Hagberg, Swart, and Schult}{Hagberg
+  et~al\mbox{.}}{[n.d.]}]%
+        {networkx}
+\bibfield{author}{\bibinfo{person}{Aric Hagberg}, \bibinfo{person}{Pieter
+  Swart}, {and} \bibinfo{person}{Dan Schult}.}
+  \bibinfo{year}{[n.d.]}\natexlab{}.
+\newblock \bibinfo{title}{{NetworkX: a Python package for the creation,
+  manipulation, and study of the structure, dynamics, and functions of complex
+  networks}}.
+\newblock \bibinfo{howpublished}{\url{https://networkx.github.io}}.
+\newblock
+\newblock
+\shownote{[Online; accessed 07-December-2019].}
 
 
 \bibitem[\protect\citeauthoryear{Han, Daudjee, Ammar, {\"O}zsu, Wang, and
